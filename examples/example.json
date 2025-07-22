@@ -1,0 +1,118 @@
+[
+  {
+    "name": "root",
+    "nodes": [
+      {
+        "uniq_id": "uniq_id_12",
+        "nexts": [],
+        "type": "CONDITION",
+        "name": "Check Roll",
+        "description": "see final one 'need_roll'\nif see need_roll is True give me True \nelse if see need_roll is false, give me False",
+        "tool": "",
+        "true_next": "uniq_id_11",
+        "false_next": "uniq_id_10",
+        "ext": {
+          "pos_x": 611,
+          "pos_y": -237.20000000000005,
+          "width": 312,
+          "height": 326,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_11",
+        "nexts": [
+          "uniq_id_7"
+        ],
+        "type": "STEP",
+        "name": "roll",
+        "description": "use dice to roll\nprovide the func_name without any parentheses or additional characters.\n",
+        "tool": "RollD20",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 1059,
+          "pos_y": -161.20000000000005,
+          "width": 309,
+          "height": 258,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_10",
+        "nexts": [
+          "uniq_id_7"
+        ],
+        "type": "STEP",
+        "name": "Player",
+        "description": "As a Player, I want to perform an action. (in short, we do fast play) Output the JSON in the format: {{\"action\": \"palyer: I want xxxx\"}}",
+        "tool": "",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 1012.421417167448,
+          "pos_y": 254.26425150234402,
+          "width": 301,
+          "height": 442,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_7",
+        "nexts": [
+          "uniq_id_12"
+        ],
+        "type": "STEP",
+        "name": "Dungeon Master",
+        "description": " As DnD DM, describe the current scenario for the player. (in short, we do fast play) sometimes roll dice, sometime not,  if player roll roll_number, you need explain what the roll affect result, start from your roll x blablabla. Output the JSON in the format: {{\"scenario\": \"DM: your action description\", \"need_roll\": True/False}} \n\n(make the story interleave roll and not roll, 50%-50%)",
+        "tool": "",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 82,
+          "pos_y": 90,
+          "width": 475,
+          "height": 466,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_1",
+        "nexts": [
+          "uniq_id_7"
+        ],
+        "type": "START",
+        "name": "Node",
+        "description": "",
+        "tool": "",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": -289,
+          "pos_y": 141,
+          "width": 200,
+          "height": 200,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_9",
+        "nexts": [],
+        "type": "TOOL",
+        "name": "",
+        "description": "import random\n\n@tool\ndef RollD20() -> int:\n    \"\"\"\n    :return: number\n    \"\"\"\n    random_number = random.randint(1, 20)\n    return random_number\n",
+        "tool": "",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 143,
+          "pos_y": -389,
+          "width": 333,
+          "height": 337,
+          "info": ""
+        }
+      }
+    ],
+    "serial_number": 15
+  }
+]

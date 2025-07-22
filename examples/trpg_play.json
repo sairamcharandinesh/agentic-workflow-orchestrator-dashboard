@@ -1,0 +1,84 @@
+[
+  {
+    "name": "root",
+    "nodes": [
+      {
+        "uniq_id": "uniq_id_10",
+        "type": "STEP",
+        "name": "Step2",
+        "description": "As a Player, I want to perform an action. (in short, we do fast play) Output the JSON in the format: {{\"action\": \"palyer:because blablabla I want xxxx\"}}",
+        "tool": "",
+        "nexts": [
+          "uniq_id_7"
+        ],
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 960.009555910482,
+          "pos_y": 148.07991229613796,
+          "width": 358,
+          "height": 459,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_7",
+        "type": "STEP",
+        "name": "Step1",
+        "description": "As DnD DM, describe the next story for the player.  (in short, we do fast play)  output format: {{\"story\": \"DM: because you blablabla\"}} ",
+        "tool": "",
+        "nexts": [
+          "uniq_id_10"
+        ],
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 402.26505848642046,
+          "pos_y": 12.264473582491112,
+          "width": 388,
+          "height": 527,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_1",
+        "type": "STEP",
+        "name": "Node",
+        "description": "As DnD DM, describe the secene for the player.  (in short, we do fast play)  output format: {{\"scenario\": \"DM: <describe>\"}} ",
+        "tool": "",
+        "nexts": [
+          "uniq_id_7"
+        ],
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": -44.70780224171054,
+          "pos_y": -59.723776200616605,
+          "width": 264,
+          "height": 351,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "11",
+        "type": "START",
+        "name": "Node 11",
+        "description": "",
+        "tool": "",
+        "nexts": [
+          "uniq_id_1"
+        ],
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": -316.4791241918573,
+          "pos_y": -129.3754157722915,
+          "width": 150,
+          "height": 200,
+          "info": null
+        }
+      }
+    ],
+    "serial_number": 12
+  }
+]

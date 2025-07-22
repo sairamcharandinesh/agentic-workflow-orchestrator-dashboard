@@ -1,0 +1,80 @@
+[
+  {
+    "name": "root",
+    "nodes": [
+      {
+        "uniq_id": "uniq_id_1",
+        "nexts": [
+          "uniq_id_2"
+        ],
+        "type": "START",
+        "name": "Node",
+        "description": "",
+        "tool": "",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 0,
+          "pos_y": 0,
+          "width": 200,
+          "height": 200,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_2",
+        "nexts": [
+          "uniq_id_3"
+        ],
+        "type": "STEP",
+        "name": "Node",
+        "description": "write an article, content is startup.md",
+        "tool": "",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 327.59479341998815,
+          "pos_y": 161.90704571490218,
+          "width": 244,
+          "height": 293,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_3",
+        "nexts": [],
+        "type": "STEP",
+        "name": "Node",
+        "description": "save the content",
+        "tool": "save_file",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 735.2973967099941,
+          "pos_y": 205.7843802599644,
+          "width": 357,
+          "height": 306,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_4",
+        "nexts": [],
+        "type": "TOOL",
+        "name": "Node",
+        "description": "import os\n\n@tool\ndef save_file(file_path: str, content: str) -> None:\n    \"\"\"\n    :function: save_file\n    :param file_path: Path to the file where the content will be saved\n    :param content: The content to be written to the file\n    :return: True if the file was saved successfully, False otherwise\n    \"\"\"\n    try:\n        with open(file_path, 'w', encoding='utf-8') as file:\n            file.write(content)\n    except Exception as e:\n        print(f\"An error occurred: {e}\")\n",
+        "tool": "",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 620.1932651097568,
+          "pos_y": -275.59255795696026,
+          "width": 402,
+          "height": 377,
+          "info": ""
+        }
+      }
+    ],
+    "serial_number": 5
+  }
+]

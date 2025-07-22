@@ -1,0 +1,99 @@
+[
+  {
+    "name": "root",
+    "nodes": [
+      {
+        "uniq_id": "uniq_id_1",
+        "nexts": [
+          "uniq_id_3"
+        ],
+        "type": "START",
+        "name": "Node",
+        "description": "",
+        "tool": "",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": -181.31370708601534,
+          "pos_y": 385.51804586382025,
+          "width": 200,
+          "height": 200,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_2",
+        "nexts": [],
+        "type": "CONDITION",
+        "name": "Check Prize",
+        "description": "check final buy number, \nif larger than 10, shows win, \notherwise, fail",
+        "tool": "",
+        "true_next": "uniq_id_4",
+        "false_next": "uniq_id_5",
+        "ext": {
+          "pos_x": 571.0197089529861,
+          "pos_y": 133.4824503701893,
+          "width": 326,
+          "height": 279,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_3",
+        "nexts": [
+          "uniq_id_2"
+        ],
+        "type": "STEP",
+        "name": "Buy lottery",
+        "description": "Buy a lottery ticket by a random numbe between 2 to twenty one. just give me a number",
+        "tool": "",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 112.40793320459551,
+          "pos_y": 316.60204533040013,
+          "width": 371,
+          "height": 289,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_4",
+        "nexts": [],
+        "type": "STEP",
+        "name": "Node",
+        "description": "output: \"You Win! GO home\"",
+        "tool": "",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 916.417663622586,
+          "pos_y": -68.20692060512238,
+          "width": 306,
+          "height": 385,
+          "info": ""
+        }
+      },
+      {
+        "uniq_id": "uniq_id_5",
+        "nexts": [
+          "uniq_id_3"
+        ],
+        "type": "STEP",
+        "name": "Node",
+        "description": "output:\" fail, buy again\"",
+        "tool": "",
+        "true_next": null,
+        "false_next": null,
+        "ext": {
+          "pos_x": 821.9160005334202,
+          "pos_y": 507.24020251989464,
+          "width": 200,
+          "height": 200,
+          "info": ""
+        }
+      }
+    ],
+    "serial_number": 7
+  }
+]
